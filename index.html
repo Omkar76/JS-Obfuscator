@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+
+        <title>Javascript obfuscator</title>
+
+        <meta charset="utf-8">
+        <meta name = "viewport" content = "width=device-width,initial-scale=1.0">
+        <meta name = "author" content = "Omkar">
+        <meta name ="description" content="Javacript obfuscator : Secure your source code">
+        
+        <link rel="stylesheet" href="styles.css">
+
+        <script src="https://cdn.jsdelivr.net/npm/javascript-obfuscator/dist/index.browser.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/ace-builds@1.4.8/src-min/ace.js" integrity="sha256-+svOVB1WmhKhTy7N21gWvtyXn91qF0r52P2hIArRRug=" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+        
+    </head>
+    <body>
+
+    <nav>
+        <button data-tab = "#editor">Source</button>
+        <button data-tab = "#output">Obfuscated</button>
+    </nav>
+    <main id="tab-container">
+        <div id="editor"></div>      
+        <output id ="output"></output>
+    </main>
+
+    </body>
+</html>

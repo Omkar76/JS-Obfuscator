@@ -1,0 +1,49 @@
+body{
+    margin:0;
+    padding:0;
+    display:flex;
+    width:100vw;
+    height:100vh;
+    flex-direction:column;
+    overflow:hidden;         
+}
+
+ output,#editor{
+    min-width: 100vw;  
+    min-height:100%;
+    box-sizing: border-box;
+    display:block;
+    overflow-y:hidden;
+    padding:10px;
+}
+
+main{
+    display:flex;
+    overflow-x:hidden;
+    flex-direction:row;
+    height:100%;
+}
+
+nav{
+    display:flex;
+    flex-direction:row;
+}
+
+nav>button{
+    width:50%;
+    text-align:center;
+    background-color:rgb(25, 171, 216);
+    padding:10px;
+    color:white;
+    display: block;
+    font-weight:900;
+    border:1px ridge dodgerblue;
+}
+
+#tab-container{
+    width:100vw;
+    display:flex;
+    flex-direction:row;
+    overflow-x:hidden;
+    height:100%;
+}
