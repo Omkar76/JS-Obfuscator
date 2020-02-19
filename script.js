@@ -1,5 +1,6 @@
 'use strict';
 
+const App ={};
 
 const editorConfig = {
     theme:'ace/theme/dracula',
@@ -10,7 +11,6 @@ const editorConfig = {
     enableBasicAutocompletion:true,
 }
 
-const App ={};
 
 window.onload = () =>{
   App.tabs = document
@@ -23,7 +23,7 @@ window.onload = () =>{
 
   App.tabButtons[0]
   .addEventListener('click',openEditor);
-  
+
   App.tabButtons[1]
   .addEventListener('click',openOutput);
 
@@ -39,8 +39,6 @@ window.onload = () =>{
   
 }
 
-
- 
 function openEditor(){
     App.tabs[0].style.display = 'block';
     App.tabs[1].style.display = 'none'; 
