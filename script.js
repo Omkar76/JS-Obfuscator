@@ -1,7 +1,5 @@
 'use strict';
 
-let tabs,
-    tabButtons;
 
 const editorConfig = {
     theme:'ace/theme/dracula',
@@ -12,48 +10,65 @@ const editorConfig = {
     enableBasicAutocompletion:true,
 }
 
+const App ={};
+
 window.onload = () =>{
-  tabs = document
+  App.tabs = document
          .querySelector('#tab-container')
          .children;
      
-  tabButtons = document
+  App.tabButtons = document
               .querySelector('nav')
               .children;
 
-  for(let button of tabButtons){
-      button.addEventListener('click',openTab);
-  }
+  App.tabButtons[0]
+  .addEventListener('click',openEditor);
   
-  const editor = ace.edit('editor');
+  App.tabButtons[1]
+  .addEventListener('click',openOutput);
 
-  editor.setOptions(editorConfig);
+//   for(let button of tabButtons){
+//       button.addEventListener('click',openTab);
+//   }
   
-  const output = ace.edit('output');
-  output.setOptions(editorConfig);
+  App.editor = ace.edit('editor');
+  App.editor.setOptions(editorConfig);
   
-  tabButtons[1].onclick = () =>{
-         
-    let code  = editor.getValue();
+  App.output = ace.edit('output');
+  App.output.setOptions(editorConfig);
+  
+}
 
-    output.setValue(
+
+ 
+function openEditor(){
+    App.tabs[0].style.display = 'block';
+    App.tabs[1].style.display = 'none'; 
+}
+
+function openOutput(){
+    App.tabs[0].style.display = 'none' ;
+    App.tabs[1].style.display = 'block';
+
+    let code  = App.editor.getValue();
+
+    App.output.setValue(
            JavaScriptObfuscator.obfuscate(code,{ 
             compact: false, 
             controlFlowFlattening: true,
            }).toString()
    );
-  }
-}
+ }
 
-function openTab(e){
-   let clickedTabButton = e.target;
+// function openTab(e){
+//    let clickedTabButton = e.target;
 
-   for(let tab of tabs){
-       tab.style.display = 'none';
-   }
+//    for(let tab of tabs){
+//        tab.style.display = 'none';
+//    }
    
-   let tabToDisplay =
-   document.querySelector(clickedTabButton.dataset.tab);
+//    let tabToDisplay =
+//    document.querySelector(clickedTabButton.dataset.tab);
    
-   tabToDisplay.style.display = 'block';
-}
+//    tabToDisplay.style.display = 'block';
+// }
