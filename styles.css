@@ -8,7 +8,7 @@ body{
     overflow:hidden;         
 }
 
- output,#editor{
+ #output,#editor{
     min-width: 100vw;  
     min-height:100%;
     box-sizing: border-box;
@@ -37,6 +37,7 @@ nav>button{
     color:white;
     display: block;
     font-weight:900;
+    font-size: 1.3rem;
     border:1px ridge dodgerblue;
 }
 
@@ -46,4 +47,17 @@ nav>button{
     flex-direction:row;
     overflow-x:hidden;
     height:100%;
+}
+
+#copy{
+    position: fixed;
+    background-color: dodgerblue;
+    color:white;
+    padding: 1rem;
+    bottom:1rem;
+    right:1rem;
+    border:0.4rem solid black;
+    border-radius: 0.4rem;
+    user-select: none;
+    font-size: medium;
 }
