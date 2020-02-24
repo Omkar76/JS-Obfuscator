@@ -27,17 +27,19 @@ window.onload = () =>{
   App.tabButtons[1]
       .addEventListener('click', openOutput);
 
-  //   for(let button of tabButtons){
-  //       button.addEventListener('click',openTab);
-  //   }
-  App.copy = document.querySelector('#copy');
-  App.copy.addEventListener('click', copyCode);
+  App.copyButton = document.querySelector('#copy');
+  App.copyButton.addEventListener('click', copyCode);
+   
 
   App.editor = ace.edit('editor');
   App.editor.setOptions(editorConfig);
 
   App.output = ace.edit('output');
-  App.output.setOptions(editorConfig);
+  App.output.setOptions({...editorConfig , 
+    readOnly: true,
+  });
+
+  const clipboard =  new Clipboard('#copy');
 };
 
 function openEditor() {
@@ -57,20 +59,9 @@ function openOutput() {
         controlFlowFlattening: true,
       }).toString(),
   );
+  
 }
 
-function copyCode() {
-  App.output.select();
-}
-// function openTab(e){
-//    let clickedTabButton = e.target;
-
-//    for(let tab of tabs){
-//        tab.style.display = 'none';
-//    }
-
-//    let tabToDisplay =
-//    document.querySelector(clickedTabButton.dataset.tab);
-
-//    tabToDisplay.style.display = 'block';
-// }
+   function copyCode(e) {
+     App.copyButton.dataset.clipboardText = App.output.getValue();
+   }
