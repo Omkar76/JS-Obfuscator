@@ -29,17 +29,16 @@ window.onload = () =>{
 
   App.copyButton = document.querySelector('#copy');
   App.copyButton.addEventListener('click', copyCode);
-   
 
   App.editor = ace.edit('editor');
   App.editor.setOptions(editorConfig);
 
   App.output = ace.edit('output');
-  App.output.setOptions({...editorConfig , 
+  App.output.setOptions({...editorConfig,
     readOnly: true,
   });
 
-  const clipboard =  new Clipboard('#copy');
+  const clipboard = new Clipboard('#copy');
 };
 
 function openEditor() {
@@ -59,9 +58,8 @@ function openOutput() {
         controlFlowFlattening: true,
       }).toString(),
   );
-  
 }
 
-   function copyCode(e) {
-     App.copyButton.dataset.clipboardText = App.output.getValue();
-   }
+function copyCode(e) {
+  App.copyButton.dataset.clipboardText = App.output.getValue();
+}
