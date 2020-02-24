@@ -42,11 +42,27 @@ window.onload = () =>{
 };
 
 function openEditor() {
+  App.tabButtons[0]
+      .style
+      .backgroundColor = 'rgb(36, 195, 243)';
+
+  App.tabButtons[1]
+      .style
+      .backgroundColor = 'rgb(25, 171, 216)';
+
   App.tabs[0].style.display = 'block';
   App.tabs[1].style.display = 'none';
 }
 
 function openOutput() {
+  App.tabButtons[1]
+      .style
+      .backgroundColor = 'rgb(36, 195, 243)';
+
+  App.tabButtons[0]
+      .style
+      .backgroundColor = 'rgb(25, 171, 216)';
+
   App.tabs[0].style.display = 'none';
   App.tabs[1].style.display = 'block';
 
