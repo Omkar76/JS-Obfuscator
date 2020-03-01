@@ -42,26 +42,18 @@ window.onload = () =>{
 };
 
 function openEditor() {
-  App.tabButtons[0]
-      .style
-      .backgroundColor = 'rgb(36, 195, 243)';
+  App.tabButtons[0].classList.add('active-button')
 
-  App.tabButtons[1]
-      .style
-      .backgroundColor = 'rgb(25, 171, 216)';
+  App.tabButtons[1].classList.remove('active-button');
 
   App.tabs[0].style.display = 'block';
   App.tabs[1].style.display = 'none';
 }
 
 function openOutput() {
-  App.tabButtons[1]
-      .style
-      .backgroundColor = 'rgb(36, 195, 243)';
+  App.tabButtons[0].classList.remove('active-button');
 
-  App.tabButtons[0]
-      .style
-      .backgroundColor = 'rgb(25, 171, 216)';
+  App.tabButtons[1].classList.add('active-button')
 
   App.tabs[0].style.display = 'none';
   App.tabs[1].style.display = 'block';

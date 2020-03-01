@@ -32,13 +32,19 @@ nav{
 nav>button{
     width:50%;
     text-align:center;
-    background-color:rgb(25, 171, 216);
+    background-color:black;
     padding:10px;
     color:white;
     display: block;
     font-weight:900;
-    font-size: 1.3rem;
-    border:1px ridge dodgerblue;
+    font-size: 1.3em;
+    border:transparent;
+}
+
+nav>.active-button{
+    color:dodgerblue;
+    text-shadow: 0 0 20px dodgerblue;
+    border:1px inset dodgerblue;
 }
 
 #tab-container{
@@ -51,13 +57,15 @@ nav>button{
 
 #copy{
     position: fixed;
-    background-color: dodgerblue;
-    color:white;
-    padding: 1rem;
+    background-color: black;
+    color:dodgerblue;
+    font-size: 1.3em;
+    padding: 0.5em;
     bottom:1rem;
     right:1rem;
     border:0.4rem solid black;
     border-radius: 0.4rem;
     user-select: none;
-    font-size: medium;
+    font-weight: 900;
+    text-shadow: 0 0 20px dodgerblue;
 }
