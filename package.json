@@ -20,7 +20,9 @@
   },
   "homepage": "https://github.com/Omkar76/JS-Obfuscator#readme",
   "dependencies": {
-    "javascript-obfuscator": "@0.25.2"
+    "javascript-obfuscator": "@0.25.2",
+    "ace-builds": "@1.4.8",
+    "clipboard.js": "1.5.12"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
