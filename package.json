@@ -1,0 +1,29 @@
+{
+  "name": "obfuscator",
+  "version": "1.0.0",
+  "description": "Javascript and node.js obfuscator",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Omkar76/JS-Obfuscator.git"
+  },
+  "keywords": [
+    "obfuscator","security","cryptography"
+  ],
+  "author": "Omkar Jadhav",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Omkar76/JS-Obfuscator/issues"
+  },
+  "homepage": "https://github.com/Omkar76/JS-Obfuscator#readme",
+  "dependencies": {
+    "javascript-obfuscator": "@0.25.2"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-google": "^0.14.0"
+  }
+}
